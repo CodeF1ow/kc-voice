@@ -5,7 +5,7 @@
 ## Preview 1
 https://i.imgur.com/jl4R2yM.png
 
-## Preview 1
+## Preview 2
 https://i.imgur.com/EozW91Z.png
 
 ## Requirements
