@@ -3,8 +3,10 @@
 
 ## Author ElKiri86
 
-## Preview
+## Preview 1
 https://i.imgur.com/jl4R2yM.png
+
+## Preview 1
 https://i.imgur.com/EozW91Z.png
 
 ## Requirements
