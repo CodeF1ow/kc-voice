@@ -1,7 +1,6 @@
 ## kc-voice
- Sistema de voz para FiveM
-
-## Author ElKiri86
+- Spanish: Sistema de voz con HUD para FiveM ( No es "trew_hud_ui" )
+- English: Voice system with HUD for FiveM ( Not "trew_hud_ui" )
 
 ## Preview 1
 https://i.imgur.com/jl4R2yM.png
@@ -19,3 +18,4 @@ https://i.imgur.com/EozW91Z.png
 ensure kc-voice
 ensure rp-radio
 ```
+## Author ElKiri86
