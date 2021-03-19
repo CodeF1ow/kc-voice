@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<style>
+			#voice {
+				position:absolute;
+				left: 97.5%;
+				top:94.5%;
+				width: 2.2%;
+				height: 3.8%;
+				padding:0px;
+				text-align: center;
+				float:left;
+				transform: rotateZ(270deg); 
+				background-color: black;
+				border-radius: 8px;
+				opacity: .9;
+			}
+			
+			#box {
+				background:#000000fd;
+				background-position: center; 
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				border-radius: 6px;
+			}
+			
+			#micro {
+				color: rgb(255, 255, 255);
+			}
+
+			#voz {
+			  	margin: 0;
+              	position:absolute;			  
+			  	top:96.4%;
+			  	left:98.600%;
+				text-align: center;
+              	font-size: 25px;
+	          	opacity: 1;
+			  	transform: translate(-50%, -50%); /*rotação das barras*/
+            }
+			
+			body {
+         		overflow:hidden;
+				width: 4%;
+				height: 4%;
+       		}
+
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+
+
+		<script>	
+
+				$(function() {
+					var $box = $("#box");
+					var $micro = document.getElementById("micro");
+
+					window.addEventListener('message', function(event){
+					 	$box.css("width", event.data.heal + "%");
+						 
+					 	if (event.data.talking == true) 
+					 	{
+							 $micro.style.transform = "scale(1.1,1.1)";
+							$micro.style.color = "white";
+							$micro.className = "fas fa-microphone-alt";							
+					 	}
+					 	else if (event.data.talking == false)
+					 	{
+							$micro.className = "fas fa-microphone-alt-slash";
+					 	}
+
+						 
+						if (event.data.heal == 25 ) { 
+							document.getElementById("box").style.borderBottom = "thick solid red";
+						} else if (event.data.heal == 52 ) { 
+							$box.borderBottom = "thick solid #0000FF";
+
+						}else if (event.data.heal == 100 ) { 
+							$box.borderBottom = "thick solid #0000FF";
+						}
+
+					}); 
+				});
+
+		</script>
+		
+	</head>
+
+	<body>
+			<div id="voice"><div id="box"></div></div>
+			<div id="voz"><i id="micro" class="fas fa-microphone-alt-slash"></i></div>
+	</body>
+</html>
