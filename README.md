@@ -17,4 +17,5 @@ https://i.imgur.com/EozW91Z.png
 
 ```
 ensure kc-voice
+ensure rp-radio
 ```
